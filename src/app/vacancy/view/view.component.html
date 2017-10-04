@@ -1,0 +1,95 @@
+<div [@dialog] *ngIf="viewContent()" class="dialog">
+  <div class="title"><h1>{{item.title}}</h1></div>
+  <table class="organization">
+    <tr>
+      <td>Название организации: 	null</td>
+      <td>Заработая плата</td>
+    </tr>
+    <tr>
+      <td>Сфера деятельности организации: null</td>
+    </tr>
+  </table>
+  <hr>
+  <div class="short-about">
+    <table class="table-short-about">
+      <tr>
+        <td>Тип вакансии:</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Сфера, в которой предлагается вакансия:</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Желаемая специальность и квалификация:</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Должность</td>
+        <td>null</td>
+      </tr>
+    </table>
+  </div>
+  <div class="about">
+    <table class="table-about">
+      <tr>
+        <td class="tr-title-block">Требования к кандидату</td>
+      </tr>
+      <tr>
+        <td>Опыт работы:</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Возраст: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Пол: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Форма получения образования: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Курс: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Знание иностранных языков: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td> Язык: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td>Желаемые профессиональные навыки: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td> Желаемые личные качества: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td class="tr-title-block">Контактная информация</td>
+      </tr>
+      <tr>
+        <td>Контактное лицо: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td> Юридический адрес: 	</td>
+        <td>null</td>
+      </tr>
+      <tr>
+        <td> E-mail: 	</td>
+        <td>null</td>
+      </tr>
+    </table>
+
+  </div>
+  <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>
+  <button class="respond">Откликнуться</button>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

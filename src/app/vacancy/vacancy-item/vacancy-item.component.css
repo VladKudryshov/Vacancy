@@ -1,0 +1,62 @@
+.item{
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ede1e1;
+  border-radius: 5px;
+  font-family: "Roboto",sans-serif;
+  margin-top: 20px;
+}
+
+.item:hover{
+  border: 1px solid #0073ff;
+}
+
+.title{
+  padding: 15px 0;
+  overflow: hidden;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tags{
+  width: 96%;
+  overflow: hidden;
+  padding: 10px 2%;
+  color: #545559;
+}
+
+.about{
+  width: 94%;
+  overflow: hidden;
+  padding: 10px 3%;
+  font-size: 16px;
+  color: #6b6c71;
+}
+
+.down{
+  height: 55px;
+}
+
+.down button{
+  float: right;
+  height: 35px;
+  width: 150px;
+  margin: 10px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #0073ff;
+  color: #fff;
+  font-size: 14px;
+}
+
+.down button,
+button:active,
+button:focus {
+  outline: none;
+}
+
+.down > .date{
+  margin: 20px;
+  float: left;
+}

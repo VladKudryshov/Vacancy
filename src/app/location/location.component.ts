@@ -5,18 +5,19 @@ import "rxjs/add/operator/filter";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/Mergemap";
 
-
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: "location",
+  templateUrl: "./location.component.html",
+  styleUrls: ["./location.component.css"]
 })
-export class AppComponent implements OnInit {
+export class LocationComponent implements OnInit {
+  title = "";
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title
   ) {}
+
   ngOnInit() {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
@@ -27,6 +28,6 @@ export class AppComponent implements OnInit {
       })
       .filter(route => route.outlet === "primary")
       .mergeMap(route => route.data)
-      .subscribe((event) => this.titleService.setTitle(event["title"]));
+      .subscribe((event) => this.title = this.titleService.getTitle());
   }
 }

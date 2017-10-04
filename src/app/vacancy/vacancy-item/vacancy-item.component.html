@@ -1,0 +1,21 @@
+<view [(visible)]="showDialog"  ></view>
+<div class="item">
+  <div class="title">
+    <span>{{item.title}}</span>
+  </div>
+
+  <div class="tags">
+    Минск *instinctools
+  </div>
+
+  <div class="about">
+    {{item.about}}
+  </div>
+
+  <div class="down">
+    <div class="date">
+      <span>Вчера с DevBy</span>
+    </div>
+    <button name="button" (click)="showDialog = !showDialog; goProducts(item.id);">Просмотр</button>
+  </div>
+</div>

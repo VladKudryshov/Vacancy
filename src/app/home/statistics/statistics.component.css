@@ -1,0 +1,52 @@
+.statistics{
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 20px 50px;
+}
+
+.statistics > h1{
+  margin-bottom: 40px;
+}
+
+.circle{
+  background-color: #fff;
+  width: 280px;
+  height: 280px;
+  border-radius: 10em;
+  border: 10px solid #3cabfa;
+  box-shadow: -6px 6px 16px #000, inset -6px 6px 16px #000;
+}
+
+.circle:hover{
+  animation: hover-circle 5s infinite linear;
+  cursor: pointer;
+}
+
+@keyframes hover-circle{
+  0%{
+    box-shadow: -6px 6px 16px #000, inset -6px 6px 16px #000;
+  }
+  25%{
+    box-shadow: -6px -6px 16px #000, inset -6px -6px 16px #000;
+  }
+  50% {
+    box-shadow: 6px -6px 16px #000, inset 6px -6px 16px #000;
+  }
+  75% {
+    box-shadow: 6px 6px 16px #000, inset 6px 6px 16px #000;
+  }
+}
+
+.stat{
+  margin-left: 55px;
+  padding-top: 45px;
+  color: #3cabfa;
+  font-family: "Forum";
+  font-size: 40pt;
+}
+
+.stat h2{
+  color: #3cabfa;
+  font-family: "Forum";
+  font-size: 40px;
+}

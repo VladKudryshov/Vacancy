@@ -2,13 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Untitled4</title>
+  <title>Загрузка</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
-  <app-root></app-root>
+
+  <div class="navbar navbar-inverse navbar-fixed-top navbar-collapse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="assets/img/grgu.png" class="navbar-logo" alt=""></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Главная</a></li>
+          <li><a href="/vacancy">Работа</a></li>
+          <li><a href="#">Практика</a></li>
+          <li><a href="/learning">Обучение</a></li>
+          <li><a href="#">Контакты <i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <app-root></app-root>
+  <div id="slider-range"></div>
+  <div class="footer">
+    <div class="mini-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1288.383641276931!2d23.840225334894193!3d53.68429956102063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x725ceeb0ed11ba1c!2z0JPRgNC-0LTQvdC10L3RgdC60LjQuSDQs9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiDQuNC80LXQvdC4INCv0L3QutC4INCa0YPQv9Cw0LvRiw!5e0!3m2!1sru!2sby!4v1503579745917" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="logo centered">
+      <img src="assets/img/grgu.png"  alt="">
+      <p>ГРОДНЕНСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ ИМЕНИ ЯНКИ КУПАЛЫ</p>
+    </div>
+  </div>
+  <script>
+    $( function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+      });
+      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    } );
+  </script>
+
 </body>
 </html>

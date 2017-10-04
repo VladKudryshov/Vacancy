@@ -1,0 +1,31 @@
+.hot-event{
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+h1{
+  font-size: 42pt;
+}
+
+@media screen and (max-width: 768px) {
+  .hot-item{
+    background-color: #fff;
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+}
+
+.hot-item{
+  margin-left: 20px;
+  width: 270px;
+  background-color: #fff;
+  height: 250px;
+}
+
+.hot-item:hover{
+  top: -10px;
+  left: 5px;
+  border-top: 5px solid #6ce55e;
+  cursor: pointer;
+}
+

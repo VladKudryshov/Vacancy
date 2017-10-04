@@ -1,0 +1,107 @@
+
+
+<div class="filter">
+  <div class="title-filter">
+    <h3>Информация организации</h3>
+  </div>
+  <div class="content-filter">
+    <table>
+      <tr>
+        <td>
+          <label class="select">
+            <div class="title-select">Сфера деятельности</div>
+            <div class="options-select" #sphere>
+              <div class="option-selected" id="selected" (click)="viewOptions(showOptions, sphere)">
+                {{sphereSelect}}
+              </div>
+              <div id="list-options" class="list-options-select">
+                <ul>
+                  <li *ngFor="let m of sex" (click)="choseSphere(m, sphere)">{{m}}</li>
+                </ul>
+              </div>
+            </div>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <label class="select">
+          <div class="title-select">Тип вакансии</div>
+          <div class="options-select" #typeVacancy>
+            <div class="option-selected" id="selected" (click)="viewOptions(showOptions, typeVacancy)">
+              {{typeVacancySelect}}
+            </div>
+            <div id="list-options" class="list-options-select">
+              <ul>
+                <li *ngFor="let m of sex" (click)="choseTypeVacancy(m, typeVacancy)">{{m}}</li>
+              </ul>
+            </div>
+          </div>
+        </label>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="filter">
+  <div class="title-filter">
+    <h3>Личные данные</h3>
+  </div>
+  <div class="content-filter">
+    <table>
+      <tr>
+        <td>
+          <label class="select">
+            <div class="title-select">Пол</div>
+            <div class="options-select" #gender>
+              <div class="option-selected" id="selected" (click)="viewOptions(showOptions,gender)">
+                {{sexSelect}}
+              </div>
+              <div id="list-options" class="list-options-select">
+                <ul>
+                  <li *ngFor="let m of sex" (click)="choseSex(m,gender)">{{m}}</li>
+                </ul>
+              </div>
+            </div>
+          </label>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="filter">
+  <div class="title-filter">
+    <h3>Образование</h3>
+  </div>
+  <div class="content-filter">
+    <table>
+      <tr>
+        <td>
+          Курс: <br>
+
+        </td>
+      </tr>
+      <tr>
+        <td>Форма получения образования: </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="filter">
+  <div class="title-filter">
+    <h3>Дополнительные параметры</h3>
+  </div>
+  <div class="content-filter">
+    <table>
+      <tr>
+        <td>Профессиональные навыки: </td>
+      </tr>
+      <tr>
+        <td>Личные качества: </td>
+      </tr>
+      <tr>
+        <td>Знание иностранных языков:</td>
+      </tr>
+    </table>
+  </div>
+</div>
